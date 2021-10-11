@@ -27,6 +27,6 @@ echo -n $pro ' ' >> mcrAsearch.txt
 cat tempsearch.txt | grep -v "#" | wc -l >> mcrAsearch.txt
 done
 
-#get a list of proteomes that have =/ 0 matches
+#get a list of proteomes that have =/ 0 matches ; outputted in format of relative filepath
 cat mcrAsearch.txt | grep -v " 0" | cut --delimiter=' ' -f 1 > mcrAsearch.txt
 
